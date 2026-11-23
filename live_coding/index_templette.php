@@ -62,16 +62,18 @@
             <!--projet-1-->
             <div class="parent">
                 <?php foreach ($projets as $projet): ?>
-                <div class="project">
-                    <h3 class="centre"><?= htmlspecialchars($projet['titre'])?></h3>
-                    <p class="centre"><?= htmlspecialchars(mb_substr($projet['contenu'],0,99))?>
-                    </p>
-                    <br>
-                    <p class="para"><?=htmlspecialchars($projet['technologies'])?></p>
-                    
-                    <img src="images/en cours.jpg" alt="" class="zom">
-                    <img src="images/terminer.jpg" alt="" class="zom">
-                </div>
+                    <div class="project">
+                        <h3 class="centre"><?= htmlspecialchars($projet['titre']) ?></h3>
+                        <p class="centre"><?= htmlspecialchars(mb_substr($projet['contenu'], 0, 110)) ?>
+                        </p>
+                        <br>
+                        <p class="para"><?= htmlspecialchars($projet['technologies']) ?></p>
+                        <?php if ($projet['statut'] === "en cours"): ?>
+                            <img src="images/en cours.jpg" alt="Projet en cours" class="zom">
+                        <?php else: ?>
+                            <img src="images/terminer.jpg" alt="Projet terminer" class="zom">
+                        <?php endif; ?>
+                    </div>
                 <?php endforeach; ?>
             </div>
         </section>

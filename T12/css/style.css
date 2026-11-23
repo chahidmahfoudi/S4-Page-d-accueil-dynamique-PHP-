@@ -123,14 +123,21 @@ section {
 
 .projects-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
+    justify-content:space-between;
+    align-items: center;
+    gap: 30px;
     padding: 20px;
+}
+.parent{
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 .project {
-    width: 100%;
+    
+    width: 400px;
+    height: 500px;
     max-width: 600px;
     margin: auto;
     padding: 30px;
@@ -147,6 +154,10 @@ section {
 .project p {
     line-height: 1.7;
     margin-bottom: 15px;
+}
+.para{
+    padding: 20px;
+    text-align: center;
 }
 
 .termine {
